@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Sheetal-Personal Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Slabo+27px&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        /*for the bg color and text colour*/
+        body {
+            background-color: rgba(205, 21, 0, 0.21);
+            color: black;
+            font-family: 'Roboto Slab', serif;
+        }
+
+        main hr {
+            border: 0cap;
+            background-color: #83677B;
+            height: 1.6px;
+            margin: 40px 50px;
+        }
+
+        nav {
+            background-color: #A6607C;
+            color: #fff;
+            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            width: 95%;
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        nav li {
+            height: 50px;
+        }
+
+        nav li h2{
+            font-size: 20px;
+            margin-top: 10px;
+            margin-left: 20px;
+        }
+        nav a {
+            height: 100%;
+            padding: 0 30px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            color: #000000;
+        }
+
+        nav a:hover {
+            color: #fff;
+        }
+
+        nav li:first-child {
+            margin-right: auto;
+        }
+
+        .sidebar {
+            position: fixed;
+            top: 0;
+            right: 0;
+            height: 100vh;
+            width: 250px;
+            z-index: 999;
+            background-color: rgba(116, 45, 77, 0.2);
+            backdrop-filter: blur(10px);
+            box-shadow: -10px 0 10px rgba(255, 255, 255, 0.1);
+            display: none;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
+
+        .sidebar li {
+            width: 100%;
+        }
+
+        .sidebar a {
+            width: 100%;
+        }
+
+        h2 {
+            font-size: 25px;
+            margin-top: 10px;
+            margin-bottom: 10px ;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 20px;
+            padding: 20px 140px;
+        }
+
+        .paragraph {
+            font-size: 15px;
+            padding: 0 12px;
+        }
+
+        .imageandtextSection {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .imageandtextSection>div {
+            width: 20%;
+        }
+
+        .imageandtextSection img {
+            width: 100%;
+        }
+
+        .imageandtextSection .skills {
+            width: 100%;
+            max-width: 600px;
+            padding: 0 0px;
+            margin: 0 5px;
+        }
+
+        .imageandtextSection .skill-name {
+            font-size: 15px;
+            font-weight: 700;
+            color: rgb(139, 15, 15);
+            text-transform: uppercase;
+            margin: 10px 0;
+        }
+
+        .imageandtextSection .skill-bar {
+            height: 14px;
+            background: rgb(114, 22, 88);
+            border-radius: 3px;
+        }
+
+        .imageandtextSection .skill-per {
+            height: 14px;
+            background-color: rgb(196, 108, 150);
+            border-radius: 3.5px;
+            position: relative;
+            animation: fillBars 2.5s 1;
+        }
+
+        .imageandtextSection .skill-per::before {
+            content: attr(per);
+            position: absolute;
+            padding: 4px 6px;
+            background-color: #faf8f8;
+            border-radius: 5px;
+            font-size: 12px;
+            top: -35px;
+            right: 0;
+            transform: translateX(50%);
+        }
+
+        .imageandtextSection .skill-per::after {
+            content: "";
+            position: absolute;
+            width: 5px;
+            height: 12px;
+            background-color: #faf8f8;
+            top: -20px;
+            right: 0;
+            transform: translateX(50%) rotate(45deg);
+            border-radius: 1px;
+        }
+
+        @keyframes fillBars {
+            from {
+                width: 0;
+
+            }
+
+            to {
+                width: 100%;
+            }
+        }
+
+        h4 {
+            font-size: 20px;
+            padding: 0px 140px;
+            align-items: center;
+        }
+
+        .soi ul {
+            font-size: 15px;
+            padding: 5px 180px;
+            color: rgb(139, 15, 15);
+            font-weight: 700;
+        }
+
+        .soi ul li {
+            margin: 5px 0;
+        }
+
+
+        .hobbies ul {
+            font-size: 15px;
+            padding: 5px 180px;
+            color: rgb(139, 15, 15);
+            font-weight: 700;
+        }
+
+        .hobbies ul li {
+            margin: 5px 0;
+        }
+
+        .paragraph2 {
+            font-size: 15px;
+            padding: 0 12px;
+        }
+
+        .languages ul {
+            font-size: 15px;
+            padding: 5px 180px;
+            color: rgb(139, 15, 15);
+            font-weight: 700;
+        }
+
+        .languages ul li {
+            margin: 5px 0;
+        }
+
+        .table {
+            padding: 20px 120px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th {
+            border: 1px solid #000000;
+            text-align: center;
+            padding: 8px;
+            background-color: #A6607C;
+        }
+
+        td {
+            border: 1px solid #000000;
+            text-align: left;
+            padding: 8px;
+        }
+
+        .ImageandTextSection {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .ImageandTextSection>div {
+            width: 20%;
+        }
+
+        .ImageandTextSection img {
+            width: 100%;
+        }
+
+        .ImageandTextSection .skills {
+            width: 100%;
+            max-width: 600px;
+            padding: 0 0px;
+            margin: 0 5px;
+        }
+
+        .ImageandTextSection .skill-name {
+            font-size: 15px;
+            font-weight: 700;
+            color: rgb(139, 15, 15);
+            text-transform: uppercase;
+            margin: 10px 0;
+        }
+
+        .ImageandTextSection .skill-bar {
+            height: 14px;
+            background: rgb(114, 22, 88);
+            border-radius: 3px;
+        }
+
+        .ImageandTextSection .skill-per {
+            height: 14px;
+            background-color: rgb(196, 108, 150);
+            border-radius: 3.5px;
+            position: relative;
+            animation: fillBars 2.5s 1;
+        }
+
+        .ImageandTextSection .skill-per::before {
+            content: attr(per);
+            position: absolute;
+            padding: 4px 6px;
+            background-color: #faf8f8;
+            border-radius: 5px;
+            font-size: 12px;
+            top: -35px;
+            right: 0;
+            transform: translateX(50%);
+        }
+
+        .ImageandTextSection .skill-per::after {
+            content: "";
+            position: absolute;
+            width: 5px;
+            height: 12px;
+            background-color: #faf8f8;
+            top: -20px;
+            right: 0;
+            transform: translateX(50%) rotate(45deg);
+            border-radius: 1px;
+        }
+        footer {
+            bottom: 0;
+        }
+
+        .footer {
+            background: #A6607C;
+            display: flex;
+            justify-content: baseline;
+            box-sizing: border-box;
+            width: 100%;
+            padding: 50px 70px 80px 80px;
+        }
+
+        .footer .footer-left,
+        .footer .footer-center,
+        .footer .footer-right {
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .footer .footer-left {
+            width: 35%;
+        }
+
+        .footer .footer-left h3 {
+            font-size: 20px;
+        }
+
+        .footer .footer-copyright {
+            color: #47263e;
+            font-size: 14px;
+            font-weight: normal;
+            margin: 0;
+            padding-top: 10%;
+            text-align: center;
+        }
+
+        .footer .footer-center {
+            width: 35%;
+        }
+
+        .footer .footer-center i {
+            background-color: #47263e;
+            color: #090808;
+            font-size: 25px;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 42px;
+            margin: 10px 15px;
+            vertical-align: middle;
+        }
+
+        .footer .footer-center i.fa-envelope {
+            font-size: 17px;
+            line-height: 38px;
+        }
+
+        .footer .footer-center p {
+            display: inline-block;
+            color: #000000;
+            vertical-align: middle;
+            margin: 0px;
+        }
+
+        .footer .footer-center p a {
+            color: #000000;
+            text-decoration: none;
+        }
+
+        .footer .footer-center p a:hover {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .footer .footer-media {
+            margin-top: 25px;
+        }
+
+        .footer .footer-media a {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            background-color: #000000;
+            border-radius: 50%;
+            font-size: 20px;
+            color: #fff;
+            text-align: center;
+            line-height: 50px;
+            margin-right: 3px;
+            margin-bottom: 5px;
+        }
+
+        .footer .footer-media a:hover {
+            background-color: #fff;
+            color: #000000;
+        }
+
+
+        .footer2 {
+            background: #A6607C;
+            display: flex;
+            justify-content: center;
+            box-sizing: border-box;
+            width: 100%;
+            text-align: center;
+        }
+        @keyframes fillBars {
+            from {
+                width: 0;
+
+            }
+
+            to {
+                width: 100%;
+            }
+        }
+        .table2 {
+            padding: 5px 20px;
+        }
+
+        .table2 table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        @media(max-width: 500px){
+            .table2 head{
+                display: none;
+            }
+            .table2, .table2 body, .table2 tr, .table2 td{
+                display: block;
+                width: 100%;
+            }
+
+            .table2 tr{
+                margin-bottom: 15px;
+            }
+
+            .table2 td{
+                text-align: right;
+                padding-left: 50%;
+                text-align: right;
+                position: relative;
+            }
+        }
+
+        @media(max-width: 800px) {
+            .hideOnMobile{
+                display: none;
+            }
+            .menu-button{
+                display: block;
+            }
+            footer {
+                position: static;
+            }
+        }
+
+        @media (max-width: 880px) {
+
+            .footer .footer-left,
+            .footer .footer-center,
+            .footer .footer-right {
+                display: block;
+                width: 100%;
+                margin-bottom: 40px;
+                text-align: left;
+            }
+
+            .footer .footer-center i {
+                margin-left: 0px;
+            }
+        }
+
+        @media(max-width:400px){
+            .sidebar{
+                width: 100%;
+            }
+        }
+
+        
+    </style>
+</head>
+<header>
+    <nav>
+        <ul class="sidebar">
+            <li onclick=hideSidebar()>
+                <svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+            </li>
+            <li><a href="index.html"target="_blank">Home</a></li>
+            <li><a href="about.html"target="_blank">About</a></li>
+            <li><a href="gallery.html"target="_blank">Gallery</a></li>
+            <li><a href="projects.html"target="_blank">Projects</a></li>
+            <li><a href="contact.html"target="_blank">Contact Me</a></li>
+            
+        </ul>
+        <ul>
+            <li>
+                <h2>Sheetal's Portfolio</h2>
+            </li>
+            <li class="hideOnMobile"><a href="index.html" target="_blank">Home</a></li>
+            <li class="hideOnMobile"><a href="about.html"target="_blank">About</a></li>
+            <li class="hideOnMobile"><a href="gallery.html"target="_blank">Gallery</a></li>
+            <li class="hideOnMobile"><a href="projects.html"target="_blank">Projects</a></li>
+            <li class="hideOnMobile"><a href="contact.html"target="_blank">Contact Me</a></li>
+            <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <h2><u>About</u></h2>
+    <div class="paragraph">
+        Hii people, glad you clicked on to this page to know about me. Here is an introduction of mine to you all.<br>
+        My name is Sheetal Bardia and I am a 21-year old undergraduate computer science student currently in 4th year
+        seeking for a challenging entry-level position in the computer science field that will allow me to utilize my
+        skills and continue learning and growing as a developer. As a computer science student my long term goal is to
+        contribute to the advancement of technology and make an impact on people's lives through innovative solutions.
+        Beyond my academic pursuits, I believe in the importance of holistic development which is why during my studies,
+        I actively engaged myself in various projects and extracurricular activities that complemented my studies and
+        also
+        allowed me to develop my problem-solving, communication and leadership skills.
+    </div>
+    <h1><u>Academic Skills</u></h1>
+    <section class="imageandtextSection">
+        <div class="skills">
+            <div class="skill">
+                <div class="skill-name">HTML</div>
+                <div class="skill-bar">
+                    <div class="skill-per" per="70%" style="max-width: 70%"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="skill-name">CSS</div>
+                <div class="skill-bar">
+                    <div class="skill-per" per="60%" style="max-width: 60%"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="skill-name">SQL</div>
+                <div class="skill-bar">
+                    <div class="skill-per" per="50%" style="max-width: 50%"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="skill-name">Java</div>
+                <div class="skill-bar">
+                    <div class="skill-per" per="50%" style="max-width: 50%"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="skill-name">C</div>
+                <div class="skill-bar">
+                    <div class="skill-per" per="50%" style="max-width: 50%"></div>
+                </div>
+            </div>
+        </div>
+        <div class="imageSection">
+            <img src="44.jpg" alt="">
+        </div>
+    </section>
+    <div class="paragraph2">
+        Furthermore, I possess a strong set of interpersonal skills which I believe are crucial for
+        fostering positive relationships and effective teamwork. I am a great communicator, both verbal and
+        written and I am comfortable collaborating with individuals from diverse backgrounds. I am also
+        an enthusiastic learner always seeking oppurtunities to expand my knowledge. I believe in
+        continuous improvement and embrace challenges as oppurtunities for growth. I am eager to explore
+        the oppurtunities that allow me to work on challenging projects, collaborate with
+        talented individuals and continuously learn and grow in the field of computer science.
+    </div><br>
+    <h4><u>Subjects of Interest</u></h4>
+    <div class="soi">
+        <ul>
+            <li>
+                Data Structures and Algorithms
+            </li>
+            <li>
+                Database and Management Systems
+            </li>
+            <li>
+                Object Oriented Programming
+            </li>
+            <li>
+                Software Engineering
+            </li>
+            <li>
+                Web Development
+            </li>
+        </ul>
+    </div>
+    <h4><u>Academic Qualifications</u></h4>
+    <div class="table2">
+        <table>
+            <tr>
+                <th><u>Class</u></th>
+                <th><u>Degree</u></th>
+                <th><u>Discipline</u></th>
+                <th><u>Institute</u></th>
+                <th><u>Board</u></th>
+                <th><u>Year of Passing</u></th>
+                <th><u>Aggregate/CGPA</u></th>
+            </tr>
+            <tr>
+                <td>10th</td>
+                <td>Secondary</td>
+                <td>General</td>
+                <td>H.M.Education Centre</td>
+                <td>CBSE</td>
+                <td>2018</td>
+                <td>81%</td>
+            </tr>
+            <tr>
+                <td>12th</td>
+                <td>Higher-Secondary</td>
+                <td>Science</td>
+                <td>Sudhir Memorial Institute</td>
+                <td>CBSE</td>
+                <td>2020</td>
+                <td>66.6%</td>
+            </tr>
+            <tr>
+                <td>Under Graduation</td>
+                <td>B.Tech</td>
+                <td>Computer Science</td>
+                <td>University of Engineering and Management Kolkata</td>
+                <td>UEMK</td>
+                <td>2024</td>
+                <td>9.25(upto 6th sem)</td>
+            </tr>
+        </table>
+    </div>
+    <h1><u>Non-Academic Skills</u></h1>
+    <section class="ImageandTextSection">
+        <div class="skills">
+            <div class="skill">
+                <div class="skill-name">Dancing</div>
+                <div class="skill-bar">
+                    <div class="skill-per" per="80%" style="max-width: 80%"></div>
+                </div>
+                <div class="skill-name">Communication</div>
+                <div class="skill-bar">
+                    <div class="skill-per" per="80%" style="max-width: 80%"></div>
+                </div>
+                <div class="skill-name">Problem-Solving</div>
+                <div class="skill-bar">
+                    <div class="skill-per" per="80%" style="max-width: 80%"></div>
+                </div>
+                <div class="skill-name">Time Management</div>
+                <div class="skill-bar">
+                    <div class="skill-per" per="80%" style="max-width: 80%"></div>
+                </div>
+                <div class="skill-name">Critical-Thinking</div>
+                <div class="skill-bar">
+                    <div class="skill-per" per="60%" style="max-width: 60%"></div>
+                </div>
+                <div class="skill-name">Leadership</div>
+                <div class="skill-bar">
+                    <div class="skill-per" per="60%" style="max-width: 60%"></div>
+                </div>
+                <div class="skill-name">Playing Basketball</div>
+                <div class="skill-bar">
+                    <div class="skill-per" per="50%" style="max-width: 50%"></div>
+                </div>
+                <div class="skill-name">Playing Badminton</div>
+                <div class="skill-bar">
+                    <div class="skill-per" per="50%" style="max-width: 50%"></div>
+                </div>
+            </div>
+        </div>
+        <div class="ImageSection">
+            <img src="45.jpg" alt="">
+        </div>
+    </section><br>
+    <h4><u>Hobbies</u></h4>
+    <div class="hobbies">
+        <ul>
+            <li>
+                Dancing
+            </li>
+        </ul>
+    </div>
+    <h4><u>Languages Known</u></h4>
+    <div class="languages">
+        <ul>
+            <li>
+                English
+            </li>
+            <li>
+                Hindi
+            </li>
+            <li>
+                Bengali
+            </li>
+        </ul>
+    </div>
+    <h4><u>Family Background</u></h4>
+    <div class="table">
+        <table>
+            <tr>
+                <th><u>Family members</u></th>
+                <th><u>Relationship</u></th>
+                <th><u>Occupation</u></th>
+            </tr>
+            <tr>
+                <td>Raju Mal Bardia</td>
+                <td>Father</td>
+                <td>Chartered Accountant</td>
+            </tr>
+            <tr>
+                <td>Pushpa Bardia</td>
+                <td>Mother</td>
+                <td>Housewife</td>
+            </tr>
+            <tr>
+                <td>Shreya Bardia</td>
+                <td>Younger Sister</td>
+                <td>Fashion Communication, 2nd year</td>
+            </tr>
+        </table>
+    </div>
+</main>
+<footer>
+    <div class="footer">
+        <div class="footer-left">
+            <h3>Welcome Living Soul :)</h3>
+            <p>Hi, Welcome to my portfolio, I hope you scrolled down as you liked my portfolio. I am not a robot typing
+                these things, I am a human just like you all. LOL! I am Sheetal Bardia, soon to be a CS engineer and I
+                am here as a part of the bridge between technology and humans.</p>
+        </div>
+        <div class="footer-center">
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p> Kolkata</p>
+            </div>
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="mailto:bardiasheetal0107@gmail.com">E-mail</a></p>
+            </div>
+        </div>
+        <div class="footer-right">
+            <div class="footer-media">
+                <a href="https://instagram.com/_hoppyhearts_" target="_blank"><i class="fa fa-instagram"></i></a>
+                <a href="https://github.com/Sheetal0107" target="_blank"><i class="fa fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/sheetal-bardia-13086a280" target="_blank"><i
+                        class="fa fa-linkedin"></i></a>
+                <a href="https://www.facebook.com/sheetalbardia0107" target="_blank"><i class="fa fa-facebook"></i></a>
+                <a href="https://twitter.com/Sheetal_0107" target="_blank"><i class="fa fa-twitter"></i></a>
+                <a href="https://youtube.com/@_pwrettiess__" target="_blank"><i class="fa fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer2">
+        <p class="footer-copyright">Copyright &#169; ndjvinsdd | All Rights Reserved</p>
+    </div>
+</footer>
+
+<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+<script>
+    function showSidebar(){
+        const sidebar=document.querySelector('.sidebar')
+        sidebar.style.display='flex'
+    }
+</script>
+<script>
+    function hideSidebar(){
+        const sidebar=document.querySelector('.sidebar')
+        sidebar.style.display='none'
+    }
+    </script>
+</body>
+
+</html>
